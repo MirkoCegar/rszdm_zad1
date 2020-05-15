@@ -160,13 +160,13 @@ int main()
           
           if (taster == '8'){
             simbol--;
-            simbol=simbol%4;
+            simbol=(simbol+4)%4;
           }
         
           
           if (taster == '4'){
             pozicija--;
-            pozicija=pozicija%4;
+            pozicija=(pozicija+4)%4;
           }
           
           if (taster == '6'){
@@ -174,11 +174,13 @@ int main()
             pozicija=pozicija%4;
           }
         
+            _delay_ms(200);
+           
           lcd.setCursor(pozicija,0);
         lcd.write(byte(simbol));
         }
        }
       }
-  
+    }
   	return 0;
     }
